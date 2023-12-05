@@ -5,6 +5,8 @@ import lombok.Setter;
 
 @Getter
 @Setter
+
+//change
 public class SchoolManagementSystem {
     private Department[] departments = new Department[5];
     private int departmentCount = 0;
