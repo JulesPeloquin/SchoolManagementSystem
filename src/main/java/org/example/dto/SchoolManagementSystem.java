@@ -8,6 +8,8 @@ import lombok.Setter;
 
 //change
 //yudhasdyuasd
+
+//;aoshg
 public class SchoolManagementSystem {
     private Department[] departments = new Department[5];
     private int departmentCount = 0;
