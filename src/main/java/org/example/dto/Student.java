@@ -8,6 +8,7 @@ import lombok.ToString;
 @Setter
 @ToString
 public class Student {
+    public static final int MAX_COURSES = 5;
     private static int nextId = 1;
     private String id;
     private String fName;
@@ -21,12 +22,12 @@ public class Student {
         this.fName = fName;
         this.lName = lName;
         this.department = department;
-        this.courses = new Course[5];
+        this.courses = new Course[MAX_COURSES];
         this.courseNum = 0;
     }
 
     public void addCourse(Course course) {
-        if (courseNum < courses.length) {
+        if (courseNum < MAX_COURSES) {
             courses[courseNum] = course;
             courseNum++;
         }else{
