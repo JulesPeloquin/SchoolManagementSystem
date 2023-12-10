@@ -147,4 +147,22 @@ public class SchoolManagementSystem {
         course.addStudent(student);
         System.out.println("Registration is successful : Student " + studentId + "added to course " + courseId + ".");
     }
+    public void assignTeacherToCourse(String teacherId, String courseId) {
+        Teacher teacher = findTeacher(teacherId);
+        Course course = findCourse(courseId);
+
+        if (teacher == null) {
+            System.out.println("Cannot find any teacher match with teacherId " + teacherId + ", assign teacher for course " + courseId + " failed.");
+            return;
+        }
+
+        if (course == null) {
+            System.out.println("Cannot find any course match with courseId " + courseId + ", assign teacher for course " + courseId + " failed.");
+            return;
+        }
+
+        course.setTeacher(teacher);
+        System.out.println("Course{id='" + course.getId() + "', courseName='" + course.getCourseName() + "', ...} teacher info updated successfully.");
+    }
+
 }
