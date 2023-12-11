@@ -20,6 +20,10 @@ public class SchoolManagementSystem {
     public SchoolManagementSystem() {
     }
 
+    /**
+     *method that adds a department
+     * @param departmentName defines the name of the department
+     */
     public void addDepartment(String departmentName) {
         if (departmentCount < departments.length) {
             departments[departmentCount++] = new Department(departmentName);
@@ -28,6 +32,12 @@ public class SchoolManagementSystem {
         }
     }
 
+    /**
+     * method that adds a student with different characteristics
+     * @param fName the students first name
+     * @param lName the student's last name
+     * @param departmentId the Id of the student's department
+     */
     public void addStudent(String fName, String lName, String departmentId) {
         Department department = findDepartment(departmentId);
         if (department != null && studentCount < students.length) {
@@ -38,6 +48,13 @@ public class SchoolManagementSystem {
             System.out.println("Maximum number of students reached.");
         }
     }
+
+    /**
+     * method that adds a teacher with different characteristics
+     * @param fName the teacher's first name
+     * @param lName the teacher's last name
+     * @param departmentId the teacher's department Id
+     */
     public void addTeacher(String fName, String lName, String departmentId) {
         Department department = findDepartment(departmentId);
         if (department != null && teacherCount < teachers.length) {
@@ -48,6 +65,13 @@ public class SchoolManagementSystem {
             System.out.println("Maximum number of teachers reached.");
         }
     }
+
+    /**
+     * method that adds a course with different characteristics
+     * @param courseName the course's name
+     * @param credits the number of credits
+     * @param departmentId the course's department Id
+     */
     public void addCourse(String courseName, double credits, String departmentId) {
         Department department = findDepartment(departmentId);
         if (department != null && courseCount < courses.length) {
@@ -59,6 +83,11 @@ public class SchoolManagementSystem {
         }
     }
 
+    /**
+     * method that finds a department by its Id
+     * @param departmentId the department's Id
+     * @return the department or null
+     */
     public Department findDepartment(String departmentId) {
         for (Department department : departments) {
             if (department != null && department.getId().equals(departmentId)) {
@@ -67,6 +96,12 @@ public class SchoolManagementSystem {
         }
         return null;
     }
+
+    /**
+     * Method that finds a student by its Id
+     * @param studentId the student's Id
+     * @return The student or null
+     */
     public Student findStudent(String studentId) {
         for (Student student : students) {
             if (student != null && student.getId().equals(studentId)) {
@@ -75,6 +110,12 @@ public class SchoolManagementSystem {
         }
         return null;
     }
+
+    /**
+     * method that finds a teacher by its Id
+     * @param teacherId the teacher's Id
+     * @return the teacher or null
+     */
     public Teacher findTeacher(String teacherId) {
         for (Teacher teacher : teachers) {
             if (teacher != null && teacher.getId().equals(teacherId)) {
@@ -83,6 +124,12 @@ public class SchoolManagementSystem {
         }
         return null;
     }
+
+    /**
+     * method that finds a course
+     * @param courseId the course's Id
+     * @return the course or null
+     */
     public Course findCourse(String courseId) {
         for (Course course : courses) {
             if (course != null && course.getId().equals(courseId)) {
@@ -91,6 +138,10 @@ public class SchoolManagementSystem {
         }
         return null;
     }
+
+    /**
+     * method that allows for all departments to be displayed
+     */
     public void displayDepartments(){
         System.out.println("All departments: ");
         for (Department department : departments) {
@@ -99,6 +150,10 @@ public class SchoolManagementSystem {
             }
         }
     }
+
+    /**
+     * method that allows for all teachers to be displayed
+     */
     public void displayTeachers(){
         System.out.println("All teachers: ");
         for (Teacher teacher : teachers) {
@@ -107,6 +162,10 @@ public class SchoolManagementSystem {
             }
         }
     }
+
+    /**
+     * method that allows for all students to be displayed
+     */
     public void displayStudents(){
         System.out.println("All students: ");
         for (Student student : students) {
@@ -115,6 +174,10 @@ public class SchoolManagementSystem {
             }
         }
     }
+
+    /**
+     * method that allows for all courses to be displayed
+     */
     public void displayCourses(){
         System.out.println("All courses: ");
         for (Course course : courses) {
@@ -123,6 +186,12 @@ public class SchoolManagementSystem {
             }
         }
     }
+
+    /**
+     * method that allows to register a course for a student
+     * @param studentId the student's Id
+     * @param courseId the course's Id
+     */
     public void registerCourseForStudent(String studentId, String courseId) {
         Student student = findStudent(studentId);
         Course course = findCourse(courseId);
@@ -147,6 +216,12 @@ public class SchoolManagementSystem {
         course.addStudent(student);
         System.out.println("Registration is successful : Student " + studentId + "added to course " + courseId + ".");
     }
+
+    /**
+     * method that allows for a teacher to be assigned to a course
+     * @param teacherId the teacher's Id
+     * @param courseId the course's Id
+     */
     public void assignTeacherToCourse(String teacherId, String courseId) {
         Teacher teacher = findTeacher(teacherId);
         Course course = findCourse(courseId);
@@ -164,5 +239,4 @@ public class SchoolManagementSystem {
         course.setTeacher(teacher);
         System.out.println("Course{id='" + course.getId() + "', courseName='" + course.getCourseName() + "', ...} teacher info updated successfully.");
     }
-
 }

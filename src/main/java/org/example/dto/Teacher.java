@@ -14,6 +14,12 @@ public class Teacher {
     private String lName;
     private Department department;
 
+    /**
+     * A all arguments constructor that defines a teacher
+     * @param fName the teacher's first name
+     * @param lName the teacher's last name
+     * @param department the teacher's department
+     */
     public Teacher(String fName, String lName, Department department) {
         this.id = "T" + String.format("%03d", nextId++);
         this.fName = fName;

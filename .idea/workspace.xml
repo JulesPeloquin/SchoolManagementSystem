@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6d3744b-1382-4c61-af34-db997154713b" name="Changes" comment="modified the method registerCourseForStudent">
+    <list default="true" id="f6d3744b-1382-4c61-af34-db997154713b" name="Changes" comment="added a method to assign a teacher to a course">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/SchoolManagementSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/SchoolManagementSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/Teacher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,13 +119,22 @@
       <option name="project" value="LOCAL" />
       <updated>1702163211173</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added a method to assign a teacher to a course">
+      <option name="closed" value="true" />
+      <created>1702176620480</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702176620480</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Written all classes" />
     <MESSAGE value="testing" />
     <MESSAGE value="modified the method registerCourseForStudent" />
-    <option name="LAST_COMMIT_MESSAGE" value="modified the method registerCourseForStudent" />
+    <MESSAGE value="added a method to assign a teacher to a course" />
+    <option name="LAST_COMMIT_MESSAGE" value="added a method to assign a teacher to a course" />
   </component>
 </project>

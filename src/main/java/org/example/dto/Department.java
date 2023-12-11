@@ -12,6 +12,10 @@ public class Department {
     private String id;
     private String departmentName;
 
+    /**
+     * method that gives a structure to the department
+     * @param name the name of the department
+     */
     public Department (String name) {
         this.id = "D" + String.format("%03d", nextId++);
         this.departmentName = name;

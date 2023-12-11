@@ -18,6 +18,12 @@ public class Course {
     private Student[] students;
     private int studentNum;
 
+    /**
+     * an all arguments constructor that defines a coursed
+     * @param courseName the course's name
+     * @param credits the amounts of credits given in a course
+     * @param department the department to which the course is assigned
+     */
     public Course(String courseName, double credits, Department department) {
         this.id = "C" + String.format("%03d", nextId++);
         this.courseName = courseName;
@@ -27,6 +33,10 @@ public class Course {
         this.studentNum = 0;
     }
 
+    /**
+     * method that adds students and checks if the maximum amount of them is attained
+     * @param student the students in the course
+     */
     public void addStudent(Student student) {
         if (studentNum < MAX_STUDENTS) {
             students[studentNum] = student;
